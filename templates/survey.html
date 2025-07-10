@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studie: Identitätsschutz im Internet</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="logo-header text-center">
+                    <i class="bi bi-shield-lock"></i>
+                    <h1>Identitätsschutz im Internet</h1>
+                </div>
+
+                <div class="card">
+                    <div class="card-header text-center">
+                        <h2 class="mb-0">Online-Sicherheitsstudie</h2>
+                    </div>
+
+                    <div class="card-body">
+                        <p class="lead text-center mb-4">
+                            Helfen Sie uns, die Sicherheitspraktiken im Internet zu verstehen.
+                            Ihre Antworten bleiben anonym.
+                        </p>
+
+                        <form method="POST" class="needs-validation" novalidate>
+                            {{ form.hidden_tag() }}
+
+                            <!-- Age Section -->
+                            <div class="form-section">
+                                <h3 class="section-title">Persönliche Angaben</h3>
+
+                                <div class="mb-4">
+                                    <label class="form-label required">{{ form.age.label }}</label>
+                                    {{ form.age(class="form-control") }}
+                                    {% if form.age.errors %}
+                                        <div class="invalid-feedback">
+                                            {{ form.age.errors[0] }}
+                                        </div>
+                                    {% endif %}
+                                    <div class="form-text">Ihre Angabe hilft uns, altersspezifische Muster zu erkennen.</div>
+                                </div>
+                            </div>
+
+                            <!-- Social Media Section -->
+                            <div class="form-section">
+                                <h3 class="section-title">Internetnutzung</h3>
+
+                                <div class="mb-4">
+                                    <label class="form-label required">{{ form.social_media.label }}</label>
+                                    <div class="checkbox-grid">
+                                        {% for choice in form.social_media %}
+                                            <div class="checkbox-option">
+                                                {{ choice }} {{ choice.label }}
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                    {% if form.social_media.errors %}
+                                        <div class="invalid-feedback">
+                                            {{ form.social_media.errors[0] }}
+                                        </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+
+                            <!-- Security Practices -->
+                            <div class="form-section">
+                                <h3 class="section-title">Sicherheitspraktiken</h3>
+
+                                <div class="mb-4">
+                                    <label class="form-label required">{{ form.password_manager.label }}</label>
+                                    <div class="radio-group">
+                                        {% for subfield in form.password_manager %}
+                                            <div class="form-check">
+                                                {{ subfield(class="form-check-input") }}
+                                                {{ subfield.label(class="form-check-label") }}
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                    {% if form.password_manager.errors %}
+                                        <div class="invalid-feedback">
+                                            {{ form.password_manager.errors[0] }}
+                                        </div>
+                                    {% endif %}
+                                    <div class="form-text mt-2">
+                                        Passwort-Manager helfen bei der Erstellung und Verwaltung starker, einzigartiger Passwörter.
+                                    </div>
+                                </div>
+
+                                <div class="mb-4">
+                                    <label class="form-label required">{{ form.hacked_before.label }}</label>
+                                    <div class="radio-group">
+                                        {% for subfield in form.hacked_before %}
+                                            <div class="form-check">
+                                                {{ subfield(class="form-check-input") }}
+                                                {{ subfield.label(class="form-check-label") }}
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                    {% if form.hacked_before.errors %}
+                                        <div class="invalid-feedback">
+                                            {{ form.hacked_before.errors[0] }}
+                                        </div>
+                                    {% endif %}
+                                    <div class="form-text mt-2">
+                                        Dazu gehören unerlaubte Zugriffe, Phishing oder Datendiebstahl.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Contact Section -->
+                            <div class="form-section">
+                                <h3 class="section-title">Kontaktinformationen</h3>
+
+                                <div class="mb-4">
+                                    <label class="form-label required">{{ form.email.label }}</label>
+                                    {{ form.email(class="form-control") }}
+                                    {% if form.email.errors %}
+                                        <div class="invalid-feedback">
+                                            {{ form.email.errors[0] }}
+                                        </div>
+                                    {% endif %}
+                                    <div class="form-text">
+                                        Wir werden Ihre E-Mail nur für diese Studie verwenden und nicht an Dritte weitergeben.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="d-grid mt-4">
+                                <button type="submit" class="btn btn-submit btn-lg">
+                                    <i class="bi bi-send-check me-2"></i>Umfrage absenden
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <footer class="page-footer font-small blue">
+                    <p>
+                        <a href="/datenschutz" class="text-decoration-none">
+                            <i class="bi bi-shield-lock me-1"></i>Datenschutzerklärung
+                        </a>
+                    </p>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='js/validation.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+/* Main Styles */
+body {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    min-height: 100vh;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+/* Card Styling */
+.card {
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    border: none;
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+.card-header {
+    background: linear-gradient(120deg, #2c3e50, #4a6491);
+    color: white;
+    border-radius: 0 !important;
+    font-weight: 600;
+    padding: 1.5rem;
+}
+
+/* Form Sections */
+.form-section {
+    background-color: white;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.03);
+    border-left: 4px solid #3498db;
+}
+
+.section-title {
+    color: #2c3e50;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    font-size: 1.3rem;
+    border-bottom: 2px solid #e9ecef;
+}
+
+/* Header */
+.logo-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.logo-header i {
+    font-size: 2.5rem;
+    color: #3498db;
+}
+
+.logo-header h1 {
+    font-weight: 700;
+    font-size: 2.2rem;
+    color: #2c3e50;
+}
+
+/* Checkbox Grid */
+.checkbox-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1rem;
+}
+
+.checkbox-option {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 0.8rem;
+    transition: all 0.2s;
+    border: 1px solid #dee2e6;
+}
+
+.checkbox-option:hover {
+    background-color: #e9f7fe;
+    transform: translateY(-2px);
+    border-color: #3498db;
+}
+
+.checkbox-option label {
+    cursor: pointer;
+    margin-left: 8px;
+    font-weight: 500;
+    color: #495057;
+}
+
+/* Radio Buttons */
+.radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.radio-group .form-check {
+    min-width: 180px;
+    padding: 0.5rem 0;
+}
+
+/* Form Elements */
+.form-label {
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 0.8rem;
+    font-size: 1.05rem;
+}
+
+.required:after {
+    content: " *";
+    color: #e74c3c;
+}
+
+.form-control {
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    border: 2px solid #dee2e6;
+    transition: border-color 0.3s;
+}
+
+.form-control:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 0 0.25rem rgba(52, 152, 219, 0.25);
+}
+
+/* Buttons */
+.btn-submit {
+    background: linear-gradient(120deg, #27ae60, #2ecc71);
+    border: none;
+    padding: 0.9rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.3s;
+    border-radius: 8px;
+}
+
+.btn-submit:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 14px rgba(46, 204, 113, 0.3);
+}
+
+/* Validation */
+.invalid-feedback {
+    display: block;
+    margin-top: 0.5rem;
+    font-weight: 500;
+    background-color: #fee;
+    padding: 0.7rem;
+    border-radius: 6px;
+    border-left: 3px solid #e74c3c;
+}
+
+.form-text {
+    color: #6c757d;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
+/* Footer */
+footer {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    font-size: 0.9rem;
+}

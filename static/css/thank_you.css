@@ -1,0 +1,111 @@
+/* Thank You Page Styles */
+body {
+    background: linear-gradient(135deg, #e9f7fe 0%, #d1edfc 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    padding: 20px;
+}
+
+.thank-you-container {
+    width: 100%;
+    max-width: 800px;
+}
+
+.thank-you-card {
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.card-header {
+    background: linear-gradient(120deg, #27ae60, #2ecc71);
+    color: white;
+    padding: 2.5rem;
+    text-align: center;
+}
+
+.card-header h1 {
+    font-weight: 700;
+    font-size: 2.3rem;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-header i {
+    font-size: 2.8rem;
+}
+
+.card-body {
+    padding: 3rem;
+    background-color: white;
+    text-align: center;
+}
+
+.card-body h2 {
+    color: #2c3e50;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+}
+
+.results-info {
+    background-color: #e8f5e9;
+    border-radius: 12px;
+    padding: 1.8rem;
+    margin: 2.5rem 0;
+    text-align: left;
+}
+
+.results-info p {
+    font-size: 1.1rem;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.2rem;
+}
+
+.results-info i {
+    font-size: 1.5rem;
+    color: #27ae60;
+    margin-right: 1rem;
+    min-width: 30px;
+}
+
+.additional-info {
+    margin: 2.5rem 0;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.additional-info p {
+    margin-bottom: 1rem;
+}
+
+.btn-home {
+    background: linear-gradient(120deg, #3498db, #2c3e50);
+    color: white;
+    border: none;
+    padding: 0.9rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.3s;
+    margin-top: 1.5rem;
+}
+
+.btn-home:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 14px rgba(52, 152, 219, 0.3);
+}
+
+footer {
+    color: #6c757d;
+    font-size: 0.9rem;
+    padding: 1.5rem;
+}
